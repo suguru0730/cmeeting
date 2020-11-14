@@ -16,6 +16,8 @@
 
   var flag_speech = 0;
   var language_flag = 0;
+  
+  messages.textContent += '=== Welcome chinameeting ===\n';
 
   meta.innerText = `
     UA: ${navigator.userAgent}
