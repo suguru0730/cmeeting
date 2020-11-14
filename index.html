@@ -1,1 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>チナミ～～ティング</title>
+    <link rel="stylesheet" href="style.css">
 
+    <link rel="shortcut icon" href="TemplateData/favicon.ico">
+    <link rel="stylesheet" href="TemplateData/style.css">
+    <script src="TemplateData/UnityProgress.js"></script>
+    <script src="Build/UnityLoader.js"></script>
+
+    <script>
+      var unityInstance = UnityLoader.instantiate("unityContainer", "Build/chinam.json", {onProgress: UnityProgress});
+    </script>
+
+  </head>
+  <body bgcolor="#10100E" >
+
+       <div class="webgl-content">-->
+          <div id="unityContainer" style="width: 600px; height: 350px; margin: 10px;" ></div>
+          <!--<canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" ></canvas> -->
+          <!--<div class="footer">
+            <div class="webgl-logo"></div>
+            <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)"></div>
+            <div class="title">test</div>
+          </div>-->
+
+
+    <div class="container">
+      <h1 hidden class="heading">Room example</h1>
+      <p hidden class="note">
+        Change Room mode (before join in a room):
+        <a href="#">mesh</a> / <a href="#sfu">sfu</a>
+      </p>
+      <div class="room">
+        <div>
+          <video id="js-local-stream"></video>
+          <span id="js-room-mode" style="color: white"></span>:
+          <input type="text" placeholder="Room Name" id="js-room-id">
+          <button id="js-join-trigger">Join</button> <button id="js-leave-trigger">Leave</button>
+        </div>
+
+        <div class="remote-streams" id="js-remote-streams"></div>
+
+        <div class="erea" style="
+        position: absolute;
+        top: 3.5%;
+        left: 71%;
+        ">
+          <pre class="messages" id="js-messages"></pre>
+          <input type="text" id="js-local-text">
+          <button id="js-send-trigger">Send</button>
+        </div>
+      </div>
+      <p hidden class="meta" id="js-meta"></p>
+    </div>
+    <script src="skyway-latest.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
