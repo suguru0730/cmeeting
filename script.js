@@ -162,10 +162,10 @@
       uttr.lang = "ja-JP"
 
       // 速度 0.1-10 初期値:1 (倍速なら2, 半分の倍速なら0.5)
-      uttr.rate = 0.5
+      uttr.rate = 1.0
 
       // 高さ 0-2 初期値:1
-      uttr.pitch = 1.5
+      uttr.pitch = 1.7
 
       // 音量 0-1 初期値:1
        uttr.volume = 0.75
