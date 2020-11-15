@@ -93,7 +93,7 @@
         console.log(data);
         unityInstance.SendMessage ('ScriptObject','FromJS_motion', Number(data));
         
-      }else if(data == "こんにちは"){
+      }else if(data == "こんにちは"　||　data == "おはよう"　||　data == "こんばんは"　||　data == "おやすみ"　||　data == "おやすみなさい"　){
         
         sp_function(data);
         messages.textContent += `${src}: ${data}\n`;
