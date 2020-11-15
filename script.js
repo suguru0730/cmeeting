@@ -92,6 +92,11 @@
 
         console.log(data);
         unityInstance.SendMessage ('ScriptObject','FromJS_motion', Number(data));
+        
+      }else if(data == "こんにちは"){
+        
+        sp_function(data);
+        messages.textContent += `${src}: ${data}\n`;
   
       }else{
 
@@ -144,6 +149,29 @@
       };
 
       localText.value = '';
+    }
+    
+    function sp_function(arg) {
+      
+      const uttr = new SpeechSynthesisUtterance()
+
+      // 文章 (コンストラクタの引数以外に、この方法でも指定できます)
+      uttr.text = arg;
+
+      // 言語 (日本語:ja-JP, アメリカ英語:en-US, イギリス英語:en-GB, 中国語:zh-CN, 韓国語:ko-KR)
+      uttr.lang = "ja-JP"
+
+      // 速度 0.1-10 初期値:1 (倍速なら2, 半分の倍速なら0.5)
+      uttr.rate = 0.5
+
+      // 高さ 0-2 初期値:1
+      uttr.pitch = 1.5
+
+      // 音量 0-1 初期値:1
+       uttr.volume = 0.75
+ 
+      // 再生 (発言キュー発言に追加)
+      speechSynthesis.speak(uttr);
     }
 
     function vr_function() {
@@ -252,6 +280,11 @@
 
                     unityInstance.SetFullscreen(1)
             
+                  }else if(results[i][0].transcript=="こんにちは"){
+
+                    unityInstance.SendMessage ('ScriptObject','FromJS_motion', 1);
+                    room.send(1);
+                    sp_function(results[i][0].transcript);
                   }
 
                   vr_function();
