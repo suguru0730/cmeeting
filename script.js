@@ -280,7 +280,7 @@
 
                     unityInstance.SetFullscreen(1)
             
-                  }else if(results[i][0].transcript=="こんにちは"){
+                  }else if(results[i][0].transcript == "こんにちは"　||　results[i][0].transcript == "おはよう"　||　results[i][0].transcript == "こんばんは"　||　results[i][0].transcript == "おやすみ"　||　results[i][0].transcript == "おやすみなさい"){
 
                     unityInstance.SendMessage ('ScriptObject','FromJS_motion', 1);
                     room.send(1);
