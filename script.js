@@ -159,7 +159,8 @@
       uttr.text = arg;
 
       // 言語 (日本語:ja-JP, アメリカ英語:en-US, イギリス英語:en-GB, 中国語:zh-CN, 韓国語:ko-KR)
-      uttr.lang = "ja-JP"
+      //uttr.lang = "ja-JP"
+      uttr.lang = "en-US"
 
       // 速度 0.1-10 初期値:1 (倍速なら2, 半分の倍速なら0.5)
       uttr.rate = 1.0
