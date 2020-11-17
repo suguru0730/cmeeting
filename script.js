@@ -15,7 +15,7 @@
   const sdkSrc = document.querySelector('script[src*=skyway]');
 
   var flag_speech = 0;
-  var language_flag = 0;
+  var language_flag = 1;
   
   messages.textContent += '=== Welcome chinameeting ===\n';
 
